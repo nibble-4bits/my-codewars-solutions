@@ -1,0 +1,1 @@
+const decode = (s) => s?s[0]=='\\'?[s.slice(s.match(/\d+/)[0].length+1,+s.match(/\d+/)[0]+s.match(/\d+/)[0].length+1)].concat(decode(s.slice(+s.match(/\d+/)[0]+s.match(/\d+/)[0].length+1))):[s[0]].concat(decode(s.slice(1))):[];

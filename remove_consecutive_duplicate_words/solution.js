@@ -1,0 +1,1 @@
+removeConsecutiveDuplicates=s=>s.replace(/(?<=(\w+)) \1\b/g, '')

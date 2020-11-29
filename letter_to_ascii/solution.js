@@ -1,0 +1,1 @@
+const charToASCII = c => c.charCodeAt(0);

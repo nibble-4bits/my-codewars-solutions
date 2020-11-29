@@ -1,0 +1,1 @@
+TZ=/usr/share/zoneinfo/Japan date +%Y-%m-%dT%H:%M%z
