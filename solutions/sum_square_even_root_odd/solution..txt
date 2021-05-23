@@ -1,0 +1,14 @@
+package Solution;
+use List::Util;
+
+sub sum_square_even_root_odd {
+    my $array_ref = shift;
+    my @new_list = map { $_ % 2 ? sqrt $_ : $_ ** 2 } @{$array_ref};
+    
+    my $sum = List::Util::reduce { $a + $b } @new_list;
+    my $rounded = sprintf('%.2f', $sum);
+    
+    return $rounded * 1;
+};
+
+1;

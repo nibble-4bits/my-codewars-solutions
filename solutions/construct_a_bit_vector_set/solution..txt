@@ -1,0 +1,18 @@
+package Solution;
+
+use strict;
+use warnings;
+use v5.30;
+
+sub sortByBit {
+    my (@indices) = @_;
+    my $result = 0;
+    
+    foreach (@indices) {
+        $result |= (1 << $_);
+    }
+    
+    return $result;
+}
+
+1;

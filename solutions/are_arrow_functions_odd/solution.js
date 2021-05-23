@@ -1,0 +1,1 @@
+const odds = x => x.filter(v => v & 1)

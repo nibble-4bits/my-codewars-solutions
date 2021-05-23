@@ -1,0 +1,44 @@
+package Solution;
+
+use strict;
+use warnings;
+use v5.30;
+
+sub burner {
+    my ($c, $h, $o) = @_;
+    my ($water, $co2, $methane) = (0, 0, 0);
+    
+    if ($o >= int($h / 2)) {
+        $water = int($h / 2);
+        $o -= int($h / 2);
+        $h -= int($h / 2) * 2;
+    } else {
+        $water = $o;
+        $h -= $o * 2;
+        $o = 0;
+    }
+    
+    if ($c >= int($o / 2)) {
+        $co2 = int($o / 2);
+        $c -= int($o / 2);
+        $o -= int($o / 2) * 2;
+    } else {
+        $co2 = $c;
+        $o -= $c * 2;
+        $c = 0;
+    }
+    
+    if ($c >= int($h / 4)) {
+        $methane = int($h / 4);
+        $c -= int($h / 4);
+        $h -= int($h / 4) * 4;
+    } else {
+        $methane = $c;
+        $h -= $c * 4;
+        $c = 0;
+    }
+    
+    return [$water, $co2, $methane];
+}
+
+1;

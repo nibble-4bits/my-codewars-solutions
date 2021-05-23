@@ -1,0 +1,8 @@
+package Solution;
+
+sub max_multiple {
+    my ($d, $b) = @_;
+    return $d * int($b / $d);
+}
+
+1;

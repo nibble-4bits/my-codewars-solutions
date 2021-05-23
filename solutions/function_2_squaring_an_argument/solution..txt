@@ -1,0 +1,9 @@
+use strict;
+package Solution;
+
+sub square {
+    my $n = shift;
+    return $n * $n;
+}
+
+1;
